@@ -1,4 +1,3 @@
-require("").config();
 const fs = require("fs");
 const path = require("path");
 const http = require('http');
@@ -62,7 +61,6 @@ client.once(Events.ClientReady, () => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot) return;
 
-  // 1. أمر إرسال لوحة التذاكر عبر `!sick`
   if (message.content.startsWith("!sick")) {
     if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
       return message.reply("❌ هذا الأمر للأعضاء الإداريين فقط.");
@@ -97,7 +95,6 @@ client.on(Events.MessageCreate, async (message) => {
     message.delete().catch(() => {});
   }
 
-  // 2. أمر إحصائيات التذاكر (!stats)
   if (message.content.startsWith("!stats")) {
     if (!isStaff(message.member)) return message.reply("❌ هذا الأمر للإدارة فقط.");
     const data = loadData();
