@@ -24,7 +24,7 @@ const client = new Client({
 const TOKEN          = process.env.DISCORD_TOKEN;
 const CATEGORY_ID    = process.env.CATEGORY_ID   || null;
 const STAFF_ROLE_ID  = process.env.STAFF_ROLE_ID || null;
-const LOGO_URL       = "https://cdn.discordapp.com/attachments/1530347314563121303/1530359921193783417/logo.png?ex=6a654a3d&is=6a63f8bd&hm=82257f8c2b894b18cd339ddf9f8cbf66cc98ae43a097a694c634096344a154ce&";
+const LOGO_URL       = "https://cdn.discordapp.com/attachments/1530347314563121303/1530786910384160838/aalshayeeb.png?ex=6a66d7e8&is=6a658668&hm=4f49380085bdcd14fcb55a3637bb9b6cf2c1d7e8e240ee3171cb726cdf82f702&";
 const LOG_CHANNEL_ID = process.env.LOG_CHANNEL_ID || null;
 
 const DATA_FILE = path.join(__dirname, "tickets_data.json");
