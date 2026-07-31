@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const http = require('http');
 
-// ✅ Keep-Alive Server (لمنع النوم على Render)
+// ✅ Keep-Alive Server (لمنع النوم على الاستضافة)
 http.createServer((req, res) => res.end('ALshayeb Tickets is alive!')).listen(process.env.PORT || 3000);
 
 const {
@@ -21,8 +21,8 @@ const client = new Client({
   ],
 });
 
-const TOKEN          = process.env.DISCORD_TOKEN;
-const CATEGORY_ID    = process.env.CATEGORY_ID   || null;
+const TOKEN        = "MTUyNzM3NjQ5NjA1Njg2NDkxOQ.G9hKKq.lCk1Bbun1vFVos6A5fd_IUjfiny6Nrdft_otHU"; // تم وضع التوكن هنا مباشرة
+const CATEGORY_ID    = process.env.CATEGORY_ID    || null;
 const STAFF_ROLE_ID  = process.env.STAFF_ROLE_ID || null;
 const LOGO_URL       = "https://cdn.discordapp.com/attachments/1530347314563121303/1530786910384160838/aalshayeeb.png?ex=6a66d7e8&is=6a658668&hm=4f49380085bdcd14fcb55a3637bb9b6cf2c1d7e8e240ee3171cb726cdf82f702&";
 const LOG_CHANNEL_ID = process.env.LOG_CHANNEL_ID || null;
@@ -84,7 +84,7 @@ client.on(Events.MessageCreate, async (message) => {
       .setCustomId("ticket_select")
       .setPlaceholder("اختر نوع التذكرة")
       .addOptions([
-        { label: "الدعم الفني",            description: "فتح تذكرة لمساعدة تقنية",            value: "tech_support",  emoji: "🛠️" },
+        { label: "الدعم الفني",            description: "فتح تذكرة لمساعدة تقنية",            value: "tech_support",   emoji: "🛠️" },
         { label: "تقديم شكوى",              description: "فتح تذكرة لتقديم شكوى",                value: "complaint",     emoji: "⚠️" },
         { label: "تقديم قروب الشايب",    description: "لتقديم الانضمام إلى قروب الشايب",       value: "shayeb_group",  emoji: "👴" },
         { label: "🔄 إعادة ضبط الاختيار", description: "اضغط هنا إذا تعلقت القائمة",            value: "reset" },
