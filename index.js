@@ -21,7 +21,7 @@ const client = new Client({
   ],
 });
 
-const TOKEN        = "MTUyNzM3NjQ5NjA1Njg2NDkxOQ.G9hKKq.lCk1Bbun1vFVos6A5fd_IUjfiny6Nrdft_otHU"; // تم وضع التوكن هنا مباشرة
+const TOKEN = process.env.TOKEN; // تم وضع التوكن هنا مباشرة
 const CATEGORY_ID    = process.env.CATEGORY_ID    || null;
 const STAFF_ROLE_ID  = process.env.STAFF_ROLE_ID || null;
 const LOGO_URL       = "https://cdn.discordapp.com/attachments/1530347314563121303/1530786910384160838/aalshayeeb.png?ex=6a66d7e8&is=6a658668&hm=4f49380085bdcd14fcb55a3637bb9b6cf2c1d7e8e240ee3171cb726cdf82f702&";
